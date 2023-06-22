@@ -15,7 +15,7 @@ class Main extends PluginBase{
                     if(empty($args[0])){
                        $sender->sendMessage("§cPlease enter a Player name or type /tpa help!");
                        }else{
-                        $player = $args([0])->getPlayerExact();
+                        $player = $args([0]);
                      if(!$player){
                         $sender->sendMessage("§cThis Player is not Online!");
                 }else{
