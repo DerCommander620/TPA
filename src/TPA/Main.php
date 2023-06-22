@@ -10,8 +10,8 @@ class Main extends PluginBase{
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
         if($command->getName() === "tpa"){
-        if($sender instanceof Player){
-            if(empty($args[0])){
+            if($sender instanceof Player){
+                if(empty($args[0])){
                 $sender->sendMessage("§cPlease enter a Player name or type /tpa help!");
             }else{
                 $player = $args([0])->getPlayerExact();
@@ -54,7 +54,6 @@ class Main extends PluginBase{
             }
         }else{
             $sender->sendMessage("§cPlease use it In-Game");
-        }
         }
     return true;    
     }    
