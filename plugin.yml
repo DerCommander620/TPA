@@ -3,3 +3,10 @@ version: 1.0.0
 main: TPA\Main
 api: 5.1.2
 author: DerCommander610
+commands:
+  tpa:
+   description: "TPA Command"
+   permission: tpa.cmd.use
+permissions:
+   tpa.cmd.use:
+     default: true
