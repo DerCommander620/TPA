@@ -54,7 +54,8 @@ class Main extends PluginBase{
             }
         }else{
             $sender->sendMessage("§cPlease use it In-Game");
-        }
-    return true;    
-    }    
-}}
+        }   
+    return true;        
+    }}          
+}
+
