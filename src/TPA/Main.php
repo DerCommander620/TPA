@@ -9,14 +9,15 @@ use pocketmine\plugin\PluginBase;
 class Main extends PluginBase{
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
-        if($command->getName() === "tpa"){
-            if($sender instanceof Player){
-                if(empty($args[0])){
-                $sender->sendMessage("§cPlease enter a Player name or type /tpa help!");
-            }else{
-                $player = $args([0])->getPlayerExact();
-                if(!$player){
-                    $sender->sendMessage("§cThis Player is not Online!");
+        switch($command->getName()){
+            case "tpa":
+                if($sender instanceof Player){
+                    if(empty($args[0])){
+                       $sender->sendMessage("§cPlease enter a Player name or type /tpa help!");
+                       }else{
+                        $player = $args([0])->getPlayerExact();
+                     if(!$player){
+                        $sender->sendMessage("§cThis Player is not Online!");
                 }else{
                     $player->sendMessage("§e" . $sender->getName() . " §ahas send you a TPA request!");
                     $sender->sendMessage("§aYou have successfully send a TPA request to §e" . $player);
